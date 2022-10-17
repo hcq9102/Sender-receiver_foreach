@@ -50,7 +50,7 @@ struct test_t
     template <typename T>
     void operator()(T &x)
     {
-        x = 5.0f + x;
+        x = 42.0f + x;
     }
 } f{};
 
