@@ -57,7 +57,7 @@ struct test_t
 //std::size_t threads;
 using namespace hpx::execution;
 
-template <typename ExPolicy> // still need launch policy?
+template <typename ExPolicy> 
 auto foreach_async(ExPolicy policy, std::size_t n)
 {
     using allocator_type = hpx::compute::host::block_allocator<float>;
