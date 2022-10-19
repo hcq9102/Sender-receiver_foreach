@@ -1,0 +1,84 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_19fa2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_19fa2.dir/build.make CMakeFiles/cmTC_19fa2.dir/build
+gmake[1]: Entering directory '/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_19fa2.dir/src.cxx.o
+/opt/apps/gcc/12.2.0/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_19fa2.dir/src.cxx.o -c /work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_19fa2
+/opt/apps/cmake/3.23.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19fa2.dir/link.txt --verbose=1
+/opt/apps/gcc/12.2.0/bin/g++ CMakeFiles/cmTC_19fa2.dir/src.cxx.o -o cmTC_19fa2 
+CMakeFiles/cmTC_19fa2.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x2d): undefined reference to `pthread_create'
+src.cxx:(.text+0x39): undefined reference to `pthread_detach'
+src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x56): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_19fa2.dir/build.make:99: cmTC_19fa2] Error 1
+gmake[1]: Leaving directory '/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_19fa2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e32c9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e32c9.dir/build.make CMakeFiles/cmTC_e32c9.dir/build
+gmake[1]: Entering directory '/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e32c9.dir/src.cxx.o
+/opt/apps/gcc/12.2.0/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e32c9.dir/src.cxx.o -c /work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e32c9
+/opt/apps/cmake/3.23.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e32c9.dir/link.txt --verbose=1
+/opt/apps/gcc/12.2.0/bin/g++ CMakeFiles/cmTC_e32c9.dir/src.cxx.o -o cmTC_e32c9 
+CMakeFiles/cmTC_e32c9.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x2d): undefined reference to `pthread_create'
+src.cxx:(.text+0x39): undefined reference to `pthread_detach'
+src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x56): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_e32c9.dir/build.make:99: cmTC_e32c9] Error 1
+gmake[1]: Leaving directory '/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e32c9/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

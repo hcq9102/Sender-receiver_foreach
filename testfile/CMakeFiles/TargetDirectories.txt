@@ -1,0 +1,3 @@
+/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/foreach_async.dir
+/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/edit_cache.dir
+/work/chuanqiu/senderReceiver/workhpx/test/CMakeFiles/rebuild_cache.dir
